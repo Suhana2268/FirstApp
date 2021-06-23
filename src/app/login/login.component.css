@@ -1,0 +1,24 @@
+.input-type {
+    padding: 10px;
+    margin-left:500px;
+}
+.type {
+    color: black;
+    font-weight: bold;
+    padding: 20px
+}
+.textBoxes {
+    border-radius: 5px;
+    color: rgb(43, 206, 43);
+    font-weight: bold;
+}
+.btndiv{
+    align-content: center;
+    margin-left: 700px;
+    
+}
+.btn{
+    background-color: rgb(246, 255, 253);
+    color: green;
+    font-weight: bold;
+}

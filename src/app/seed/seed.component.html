@@ -1,0 +1,25 @@
+
+<div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-4 mg-2" >
+        <div  *ngFor="let product of getAllSeeds1()"  style ="display: inline-block; margin: 10px;">
+            <div class="card" style="width: 18rem;">
+              
+            <img class="card-img-top" [src]="product.imagePath" height="300px" width="150px" alt="Card image cap">
+            <div class="card-body">
+              <p class = "card-text">{{product.commonName}}</p>
+              <p class="card-text">Description: {{product.plantDescription | description:product.plantDescription}}</p>
+              <p class="card-text">{{product.plantCost | currency:'INR'}}</p>
+            </div>
+            <div class="row">
+          
+            <div class="col col-but" style = "display: inline-block; margin-left: 20px;">
+            <div class = "btn btn-co"><button (click) = "addToCart(product)"><img src = "assets\images\cart-69-24.png"/></button></div>
+            <div class = "btn-share btn-co"><button (click) = "share(product.commonName)"><img src = "assets\images\Share-button-png-by-mtc-tutorials.png"/> </button></div>
+          </div>
+          </div>
+          </div>
+          </div>
+      </div>
+      </div>
+      </div>

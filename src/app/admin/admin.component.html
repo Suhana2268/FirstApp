@@ -1,0 +1,43 @@
+<div class="mainDiv">
+    <form #productForm = "ngForm" class = "mform" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <div class="form-group" [class.has-error] = "nameControl.invalid">
+        <label for = "commonName" class = "control-label">Product Name</label>
+        <input required type="text" class="form-control" id="pname1"  name="productName" [(ngModel)]="productModel.commonName" #nameControl = "ngModel">
+        <span class = "help-block" *ngIf = "nameControl.invalid">Product name is required</span>
+       <!-- <div>touched:{{nameControl.touched}}</div>
+        <div>untouched:{{nameControl.untouched}}</div>
+        <div>pristine:{{nameControl.pristine}}</div>
+        <div>dirty:{{nameControl.dirty}}</div>
+        <div>valid:{{nameControl.valid}}</div>
+        <div>invalid:{{nameControl.invalid}}</div>-->
+      </div>
+      <div class="form-group">
+        <label class = "control-label">Product Cost</label>
+        <input type="text" class="form-control" id="pcost" name="productCost" [(ngModel)]="productModel.plantCost">
+      </div>
+      <div class="form-group">
+        <label class = "control-label">Product description</label>
+        <input type="text" class="form-control" id="pdesc1" name="productDescrption" [(ngModel)]="productModel.plantDescription">
+      </div>
+      <div class="form-group">
+        <label class = "control-label">Product rating</label>
+        <input type="text" class="form-control" id="prating1" name="productRating" [(ngModel)]="productModel.rating">
+      </div>
+      <div class="form-check">
+        <label class = "control-label">Product Category</label>
+        <div class = "select1">
+        <select  class = "wid" id="pCategory1" name="productCategory" [(ngModel)]="productModel.category">
+          <option>Plant</option>
+          <option>Seed</option>
+        </select>
+      </div>
+      </div>
+      <div class="form-group">
+        <label class = "control-label">Product Image</label>
+        <input type="file" class="form-control" id="pimg1" name="productImage" [(ngModel)]="productModel.imagePath">
+      </div>
+      <div class = "btn">
+      <button class = "btn-sub" type="submit" >Submit</button>
+    </div>
+    </form>
+    </div>

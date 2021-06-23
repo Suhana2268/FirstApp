@@ -1,0 +1,55 @@
+.form-group{
+    padding: 10px;
+    align-content: center;
+    font-weight: bold;
+    color: rgb(29, 43, 3);
+    
+}
+
+body, html {
+height:1200px !important; 
+}
+
+.mform{
+    
+    border-width: 3px;
+    width: 20%;
+    box-sizing: border-box;
+    margin-left: 580px;
+}
+.btn {
+    margin-left: 90px;
+    
+}
+.btn-sub {
+    background-color: rgb(24, 44, 33);
+    color: blanchedalmond;
+}
+.form-check {
+    padding: 10px;
+    align-content: center;
+    font-weight: bold;
+    color: rgb(29, 43, 3);
+}
+.select1{
+    align-items: center;
+    
+}
+.wid {
+    width: 290px;
+    margin-left: -20px;
+    
+}
+.control-label {
+    padding: 5px;
+    margin-left: 55px;
+}
+.form-control {
+    color: rgb(22, 170, 22);
+    height: 35px;
+    margin-left: -20px;
+    
+    
+}
+
+

@@ -1,0 +1,51 @@
+<table>
+    <tr>
+    <td>Task Name</td>
+    <td><input type="text" #myTask name = "tsk" placeholder="Enter task name"></td>
+</tr>
+<tr>
+    <td>
+       Select the task priority</td>
+       <td>
+       <select name = "priority" #myprior>
+           <option value = "1" >First</option>
+           <option value = "2" >Second</option>
+            <option value = "3">Third</option>
+        </select>
+
+    </td>
+</tr>
+<tr>
+    <td>
+        <button (click) = "addTask(myTask.value, myprior.value)"
+        type="button">Add Task</button>
+    </td>
+</tr>
+</table>
+<br>
+<table class ="t1">
+    <tr>
+        <th>
+            Task Name
+        </th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Action</th>
+        </tr>
+    <tr *ngFor = "let task of getAllTasks()">
+        <td>{{task.taskName}}</td>
+        <td>{{task.priority}}</td>
+        <td>{{task.status}}</td>
+        <td>
+            <select #tStatus (click) = "changeStatus(tStatus.value,task.taskName)">
+                <option value = "Pending">Pending</option>
+                <option value = "Completed">Completed</option>
+                <option value = "Partiallycompleted">Partially completed</option>
+            </select>
+        </td>
+
+    </tr>
+
+    
+</table>
+
